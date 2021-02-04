@@ -54,8 +54,8 @@ function App() {
   }, [fromCurrency, toCurrency]);
 
   return (
-    <>
-      <h1>Convert</h1>
+    <div className='card'>
+      <h1>Currency Converter</h1>
       <CurrencyRow
         currencyOptions={currencyOptions}
         selectedCurrency={fromCurrency}
@@ -63,7 +63,7 @@ function App() {
         onChangeAmount={handleFromAmountChange}
         amount={fromAmount}
       />
-      <div className='equals'>=</div>
+      <div className='equals'>is equal to</div>
       <CurrencyRow
         currencyOptions={currencyOptions}
         selectedCurrency={toCurrency}
@@ -71,7 +71,7 @@ function App() {
         onChangeAmount={handleToAmountChange}
         amount={toAmount}
       />
-    </>
+    </div>
   );
 }
 
