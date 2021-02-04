@@ -1,4 +1,3 @@
-import userEvent from '@testing-library/user-event';
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import CurrencyRow from './components/CurrencyRow';
@@ -15,6 +14,7 @@ function App() {
   const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
 
   let toAmount, fromAmount;
+
   if (amountInFromCurrency) {
     fromAmount = amount;
     toAmount = amount * exchangeRate;
